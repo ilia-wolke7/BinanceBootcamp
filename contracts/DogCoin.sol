@@ -90,6 +90,9 @@ contract DogCoin { //hw4_2
           emit  TransferFinishedEvent(_to,_amount ,the_balance, get_balance(_to));   
     }
 
+    function get_number_of_payments() public view returns (uint256){
+        return payments.length;
+    }
 
 
 

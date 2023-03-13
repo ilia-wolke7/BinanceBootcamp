@@ -95,20 +95,4 @@ contract DogCoin { //hw4_2
     }
 
 
-
-
-/*
-
-    function returnAddress() public view returns (address){
-        if (msg.sender == owner) {
-            return 0x000000000000000000000000000000000000dEaD;
-        }
-        return owner;
-    }
-    function returnAddress2() public view returns (address) {
-        require(msg.sender == owner, "Caller is not owner");
-        return address(0x000000000000000000000000000000000000dEaD);
-       
-    }
-    */
 }

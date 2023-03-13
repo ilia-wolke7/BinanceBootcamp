@@ -3,10 +3,11 @@
 
 pragma solidity 0.8.17;
 
-contract BootcampContract {
+contract BootcampContract_hw4_1 {
 
     uint256 number;
     address owner;
+    address constant private  const_ret_address=0x000000000000000000000000000000000000dEaD;
 
     constructor() {
         require(msg.sender != address(0), "invalid address");
@@ -23,13 +24,13 @@ contract BootcampContract {
 
     function returnAddress() public view returns (address){
         if (msg.sender == owner) {
-            return 0x000000000000000000000000000000000000dEaD;
+            return const_ret_address;
         }
         return owner;
     }
     function returnAddress2() public view returns (address) {
         require(msg.sender == owner, "Caller is not owner");
-        return address(0x000000000000000000000000000000000000dEaD);
+        return const_ret_address;
        
     }
 }
